@@ -38,7 +38,7 @@ let score = 0;
 async function loadQuestions() {
   questionTextElement.innerText = 'Übungen werden geladen...';
   try {
-    const res = await fetch(DATA_URL, { cache: 'no-store' });
+    const res = await fetch('data/faelle/a1.json');
     if (!res.ok) throw new Error('Fehler beim Laden der Daten');
     const raw = await res.json();
 
