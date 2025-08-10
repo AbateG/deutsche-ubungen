@@ -23,10 +23,10 @@ jobs:
           pip install --verbose -r requirements.txt
 
       - name: Run build script
-        run: python generate_quizzes.py
+        run: python src/generate_quizzes.py  
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs  # Or wherever your output lives
+          publish_dir: ./main  # Or wherever your output lives
