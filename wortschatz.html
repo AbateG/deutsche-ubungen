@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wortschatz - DeutschMeister</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">DeutschMeister</a>
+      <ul>
+        <li><a href="index.html">Grammatik</a></li>
+        <li><a href="wortschatz.html" class="active">Wortschatz</a></li>
+        <li><a href="artikel.html">Artikel</a></li>
+        <li><a href="faelle.html">Fälle</a></li>
+        <button id="theme-toggle" title="Theme wechseln" aria-label="Theme wechseln">🌙</button>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="quiz-container" class="quiz-container">
+    <div id="quiz-header">
+      <div class="score-board">
+        <div id="score">Punkte: 0</div>
+        <div id="high-score">Highscore: 0</div>
+      </div>
+      <div id="progress" class="progress" aria-live="polite"></div>
+      <h2 id="question-text">Frage wird geladen...</h2>
+    </div>
+
+    <div id="options-container" class="options" role="listbox" aria-label="Antwortoptionen"></div>
+
+    <button id="next-button" style="display:none">Nächste Frage</button>
+    <p id="feedback" aria-live="polite"></p>
+    <div id="explanation" aria-live="polite"></div>
+  </div>
+
+  <script type="module" src="wortschatz.js"></script>
+</body>
+</html>
